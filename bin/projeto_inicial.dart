@@ -50,6 +50,18 @@ void main(List<String> arguments) {
   var pi = 3.14316.toStringAsFixed(2);
   print(pi);
   print(pi.runtimeType);
+  
+  //listas:
+  
+  List<String> lista =['Rodrigo', 'Adriana', 'irene', 'benedito', 'catiane', 'flavio'];
+  print(lista);
+  print(lista.length);
 
+  print(lista[1]);
+
+  //lista dinamica
+
+  List<dynamic> rodrigo = ['Rodrigo Lopes', 1.84, 30];
+  print('imprimindo lista ${rodrigo[2]}');
 
 }
