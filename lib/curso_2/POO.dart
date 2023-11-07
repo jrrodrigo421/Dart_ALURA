@@ -49,9 +49,6 @@ estaMadura(){
 
 }
 
-
-
-
 mostrarMadura(String nome, int dias, {String? cor}){
   if(dias >= 30){
     print("A $nome esta madura a mais de $dias dias");
@@ -99,7 +96,6 @@ mostrarMadura4({required String nome, required int dias, required String cor}){
     print('A $nome é $cor');
   }
 }
-
 
 bool funcEstaMadura(int dias){
   if(dias >= 30){
