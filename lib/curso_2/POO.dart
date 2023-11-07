@@ -30,7 +30,23 @@ void main(){
   mostrarMadura3('abacate', 21, cor: 'verde');
 
   mostrarMadura4(nome: 'limao', dias: 31, cor: 'veRRde');
+  
+  print('**************');
+  print('\n funcQuantosDiasMadura \n');
+  print('**************');
 
+  print(funcQuantosDiasMadura(diasColheita));
+
+  int quantosDias = funcQuantosDiasMadura(diasColheita);
+  print(quantosDias);
+
+
+}
+
+int funcQuantosDiasMadura(int dias){
+  int diasParaMadura = 30;
+  int quantosDiasFaltam = diasParaMadura - dias;
+  return quantosDiasFaltam;
 }
 
 //tipos de parametros:
