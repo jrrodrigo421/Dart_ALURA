@@ -1,7 +1,14 @@
 import 'package:projeto_inicial/projeto_inicial.dart' as projeto_inicial;
+import 'Cafe.dart';
+
 import 'package:test/test.dart';
 
 void main(List<String> arguments) {
+  
+  Cafe cafe = Cafe();
+  
+  print(cafe.runtimeType);
+  
   print('Hello world: ${projeto_inicial.calculate()}!');
   var teste = '10';
 
