@@ -161,7 +161,16 @@ void main(List<String> arguments) {
   final String apelido = 'jr';
   final String apelido1;
 
-  List<dynamic> rodrigoTeste = [idade, altura, nome, apelido];
+  // if:
+  bool maiorDeIdade;
+    if(idade > 18) {
+      maiorDeIdade = true;
+    }else {
+      maiorDeIdade = false;
+    }
+
+
+  List<dynamic> rodrigoTeste = [idade, altura, nome, apelido, 'Sou maior de idade ? $maiorDeIdade'];
   print(rodrigoTeste);
 
   //Não conseguimos mudar por conta do ser uma variavel do tipo const
@@ -178,6 +187,5 @@ void main(List<String> arguments) {
 
 
 
+
 }
-
-
