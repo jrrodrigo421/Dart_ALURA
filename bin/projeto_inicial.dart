@@ -184,6 +184,10 @@ void main(List<String> arguments) {
   //por ser final apartir do momento que ele recebe um valor ele nao muda mais
   // apelido1 = 'teste';
 
+  for(var i = 0; i<= 5; i++){
+    print('teste $i');
+
+  }
 
 
 
