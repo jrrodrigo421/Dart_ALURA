@@ -1,4 +1,4 @@
-import 'package:projeto_inicial/projeto_inicial.dart' as projeto_inicial;
+import 'package:projeto_inicial/curso_1/projeto_inicial.dart' as projeto_inicial;
 import 'Cafe.dart';
 import 'Dart:io';
 

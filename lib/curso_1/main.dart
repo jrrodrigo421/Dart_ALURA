@@ -1,4 +1,4 @@
-import 'package:projeto_inicial/MathCircle.dart';
+import 'package:projeto_inicial/curso_1//MathCircle.dart';
 
 void main(){
   double myPi = MathCircle.pi;
