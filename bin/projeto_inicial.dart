@@ -188,6 +188,13 @@ void main(List<String> arguments) {
     print('teste $i');
 
   }
+//quando não sabemos o numero exato de repetições podemos usar o while
+  // mas com for daria pra fazer a mesma coisa
+  int energia = 100;
+  while(energia > 0 ){
+    print('Mais uma repetição');
+    energia = energia -6;
+  }
 
 
 
