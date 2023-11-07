@@ -204,6 +204,69 @@ void main(List<String> arguments) {
 
 
 
+  //artigo:  https://www.geeksforgeeks.org/dart-loop-control-statements-break-and-continue/
+  // usando breack para sair do loop
+  int count = 1;
+   while(count<=10){
+     print("teste contador:  $count");
+     count++;
+
+     if (count == 4){
+       break;
+     }
+   }
+   print("fora do loop ");
 
 
+   int contador = 1;
+   do{
+     print("testando contador dowhile $contador");
+     contador++;
+     if(contador == 5){
+       break;
+     }
+   }while(contador <= 10);
+    print("fora do loop! ");
+
+
+    for(int i =1; i <= 10; i++){
+      if(i==3) {
+        break;
+      }
+      print('valor $i');
+
+    }
+    print('fora do loop for');
+
+    int countCotinue = 0;
+
+    while(countCotinue <= 10){
+      countCotinue++;
+
+      if(countCotinue == 4){
+        print('"Number 4 is skipped');
+        continue;
+      }
+      print('depois do if $countCotinue');
+    }
+
+    int count3 = 0;
+    do{
+      count3++;
+      if(count3 == 4){
+         print('Numero 4 ignorado');
+         continue;
+      }
+     print('valor do $count3');
+
+    }while(count3 <= 10);
+    print('Fora do loop');
+
+  for(int i =1; i <=10; i++ ){
+    if (i ==2){
+      print('teste dentro do loop $i');
+      continue;
+    }
+  }
+  print('fora do loop');
 }
