@@ -5,7 +5,6 @@ void main(List<String> arguments) {
   print('Hello world: ${projeto_inicial.calculate()}!');
   var teste = '10';
 
-
   // numeros hexadecimal:
   int idade = 0x00001A;
   print(idade);
@@ -27,9 +26,8 @@ void main(List<String> arguments) {
 
   // casos de conversão do dart ( Type Casting in Dart)
 
-
   //String para inteiro
-  var one =  int.parse(teste);
+  var one = int.parse(teste);
   print(one.toString());
   print("1.");
   print(one);
@@ -50,10 +48,17 @@ void main(List<String> arguments) {
   var pi = 3.14316.toStringAsFixed(2);
   print(pi);
   print(pi.runtimeType);
-  
+
   //listas:
-  
-  List<String> lista =['Rodrigo', 'Adriana', 'irene', 'benedito', 'catiane', 'flavio'];
+
+  List<String> lista = [
+    'Rodrigo',
+    'Adriana',
+    'irene',
+    'benedito',
+    'catiane',
+    'flavio'
+  ];
   print(lista);
   print(lista.length);
 
@@ -73,7 +78,7 @@ void main(List<String> arguments) {
 
   //map() Produz uma nova lista depois de
   // transformar cada elemento em uma determinada lista
-  var mappedFruits  = fruits.map((fruit) => 'Teste $fruit').toList();
+  var mappedFruits = fruits.map((fruit) => 'Teste $fruit').toList();
   print(mappedFruits);
 
   //contains Verifica se o elemento fornecido está na lista
@@ -81,7 +86,7 @@ void main(List<String> arguments) {
 
   // sort() Ordene os elementos com base na função de ordenação fornecida
 
-  List<int> numeros = [1,3,2,5,4];
+  List<int> numeros = [1, 3, 2, 5, 4];
   numeros.sort((num1, num2) => (num1 - num2));
   print(numeros);
 
@@ -91,19 +96,20 @@ void main(List<String> arguments) {
   var sum = numeros.reduce((value, element) => value + element);
   print(sum);
 
-  var initialValue = 10 ;
-  var sum2 = numeros.fold(initialValue, (previousValue, element) => previousValue + element);
+  var initialValue = 10;
+  var sum2 = numeros.fold(
+      initialValue, (previousValue, element) => previousValue + element);
   print(sum2);
 
   // every() Confirma que todos os elementos satisfazem o teste
 
-  List<Map<String, dynamic>> users  = [
+  List<Map<String, dynamic>> users = [
     {"name": 'RodrigoJr', "age": 30},
     {"name": 'Rodrigo', "age": 50},
     {"name": 'RAdriana', "age": 50},
   ];
 
-  var is18AndOver = users.every((element) => element["age"]>=18);
+  var is18AndOver = users.every((element) => element["age"] >= 18);
   print(is18AndOver);
   var hasNamesWithR = users.every((element) => element["name"].startsWith('R'));
   print(hasNamesWithR);
@@ -114,28 +120,27 @@ void main(List<String> arguments) {
   var over21s = users.where((element) => element["age"] > 21);
   print(over21s.length);
 
-  var nameR = users.firstWhere((element) => element["name"].startsWith('R'), orElse: () =>
-  {"name": '', "age": 0});
+  var nameR = users.firstWhere((element) => element["name"].startsWith('R'),
+      orElse: () => {"name": '', "age": 0});
   print(nameR);
 
-  List<Map<String, dynamic>> users2  = [
+  List<Map<String, dynamic>> users2 = [
     {"name": 'RodrigoJr', "age": 30},
     {"name": 'Rodrigo', "age": 50},
     {"name": 'RAdriana', "age": 50},
   ];
 
-  var under18s = users2.singleWhere((element) => element["age"] < 18, orElse: () => {"name": '', "age": 0});
+  var under18s = users2.singleWhere((element) => element["age"] < 18,
+      orElse: () => {"name": '', "age": 0});
   print(under18s);
-
 
   // take() skip()
   // Retorna uma coleção ao incluir ou ignorar elementos
 
-  var fiboNumbers =[1, 2, 3, 5,8 ,13, 21];
+  var fiboNumbers = [1, 2, 3, 5, 8, 13, 21];
   print(fiboNumbers.take(3).toList());
   print(fiboNumbers.skip(5).toList());
   print(fiboNumbers.take(3).skip(2).take(1));
-
 
   // List.from()
   // Cria uma nova lista a partir da coleção fornecida
@@ -143,7 +148,10 @@ void main(List<String> arguments) {
   var clonedFiboNumbers = List.from(fiboNumbers);
   print('lista clonada: $clonedFiboNumbers');
 
-  var pars = [[1,2], [3,4]];
+  var pars = [
+    [1, 2],
+    [3, 4]
+  ];
   var flattened = pars.expand((element) => element.toList());
   print('Flattened result: $flattened');
 
@@ -157,20 +165,25 @@ void main(List<String> arguments) {
   // int idade = 30;
   double altura = 1.84;
   bool geek = false;
-  const String nome =  'Rodrigo Lopes Jr';
+  const String nome = 'Rodrigo Lopes Jr';
   final String apelido = 'jr';
   final String apelido1;
 
   // if:
   bool maiorDeIdade;
-    if(idade > 18) {
-      maiorDeIdade = true;
-    }else {
-      maiorDeIdade = false;
-    }
+  if (idade > 18) {
+    maiorDeIdade = true;
+  } else {
+    maiorDeIdade = false;
+  }
 
-
-  List<dynamic> rodrigoTeste = [idade, altura, nome, apelido, 'Sou maior de idade ? $maiorDeIdade'];
+  List<dynamic> rodrigoTeste = [
+    idade,
+    altura,
+    nome,
+    apelido,
+    'Sou maior de idade ? $maiorDeIdade'
+  ];
   print(rodrigoTeste);
 
   //Não conseguimos mudar por conta do ser uma variavel do tipo const
@@ -184,89 +197,134 @@ void main(List<String> arguments) {
   //por ser final apartir do momento que ele recebe um valor ele nao muda mais
   // apelido1 = 'teste';
 
-  for(var i = 0; i<= 5; i++){
+  for (var i = 0; i <= 5; i++) {
     print('teste $i');
-
   }
 //quando não sabemos o numero exato de repetições podemos usar o while
   // mas com for daria pra fazer a mesma coisa
   int energia = 100;
-  while(energia > 0 ){
+  while (energia > 0) {
     print('Mais uma repetição');
-    energia = energia -6;
+    energia = energia - 6;
   }
-  do{
+  do {
     print('Mais uma repetiçãtetseo');
     energia = energia - 6;
-
-  }while(energia>0);
-
-
-
+  } while (energia > 0);
 
   //artigo:  https://www.geeksforgeeks.org/dart-loop-control-statements-break-and-continue/
-  // usando breack para sair do loop
+  // usando break e continue para sair do loop
+
   int count = 1;
-   while(count<=10){
-     print("teste contador:  $count");
-     count++;
+  while (count <= 10) {
+    print("teste contador:  $count");
+    count++;
 
-     if (count == 4){
-       break;
-     }
-   }
-   print("fora do loop ");
-
-
-   int contador = 1;
-   do{
-     print("testando contador dowhile $contador");
-     contador++;
-     if(contador == 5){
-       break;
-     }
-   }while(contador <= 10);
-    print("fora do loop! ");
-
-
-    for(int i =1; i <= 10; i++){
-      if(i==3) {
-        break;
-      }
-      print('valor $i');
-
+    if (count == 4) {
+      break;
     }
-    print('fora do loop for');
+  }
+  print("fora do loop ");
 
-    int countCotinue = 0;
-
-    while(countCotinue <= 10){
-      countCotinue++;
-
-      if(countCotinue == 4){
-        print('"Number 4 is skipped');
-        continue;
-      }
-      print('depois do if $countCotinue');
+  int contador = 1;
+  do {
+    print("testando contador dowhile $contador");
+    contador++;
+    if (contador == 5) {
+      break;
     }
+  } while (contador <= 10);
+  print("fora do loop! ");
 
-    int count3 = 0;
-    do{
-      count3++;
-      if(count3 == 4){
-         print('Numero 4 ignorado');
-         continue;
-      }
-     print('valor do $count3');
+  for (int i = 1; i <= 10; i++) {
+    if (i == 3) {
+      break;
+    }
+    print('valor $i');
+  }
+  print('fora do loop for');
 
-    }while(count3 <= 10);
-    print('Fora do loop');
+  int countCotinue = 0;
 
-  for(int i =1; i <=10; i++ ){
-    if (i ==2){
+  while (countCotinue <= 10) {
+    countCotinue++;
+
+    if (countCotinue == 4) {
+      print('"Number 4 is skipped');
+      continue;
+    }
+    print('depois do if $countCotinue');
+  }
+
+  int count3 = 0;
+  do {
+    count3++;
+    if (count3 == 4) {
+      print('Numero 4 ignorado');
+      continue;
+    }
+    print('valor do $count3');
+  } while (count3 <= 10);
+  print('Fora do loop');
+
+  for (int i = 1; i <= 10; i++) {
+    if (i == 2) {
       print('teste dentro do loop $i');
       continue;
     }
   }
   print('fora do loop');
+
+  /////////
+
+  // Artigo switch https://medium.com/jay-tillu/switch-case-in-dart-136793092e6e
+  // switch (expression) {
+  //   case ONE:
+  //     {
+  //       statement(s);
+  //     }
+  //     break;
+  //
+  //   case TWO:
+  //     {
+  //       statement(s);
+  //     }
+  //     break;
+  //
+  //   default:
+  //     {
+  //       statement(s);
+  //     }
+  // }
+
+  var grade = "A";
+  switch (grade) {
+    case "A":
+      {
+        print("Excelente");
+      }
+      break;
+    case "B":
+      {
+        print("Bom");
+      }
+      break;
+    case "C":
+      {
+        print("regular");
+      }
+  }
+
+  //numeroVoltas:
+  var numeroVoltas = 0;
+  for (int i = 0; i <= 10; i++) {
+    if (i < 5) {
+      print('Conclui $i voltas');
+    }
+  }
+
+  // Método para dizer quantas voltas foram dadas
+  for (int i = 0; i < 5; i++) {
+    print('Concluí $i voltas');
+  }
 }
