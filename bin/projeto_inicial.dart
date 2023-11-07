@@ -195,6 +195,13 @@ void main(List<String> arguments) {
     print('Mais uma repetição');
     energia = energia -6;
   }
+  do{
+    print('Mais uma repetiçãtetseo');
+    energia = energia - 6;
+
+  }while(energia>0);
+
+
 
 
 
