@@ -1,5 +1,6 @@
 import 'package:projeto_inicial/projeto_inicial.dart' as projeto_inicial;
 import 'Cafe.dart';
+import 'Dart:io';
 
 import 'package:test/test.dart';
 
@@ -355,6 +356,31 @@ void main(List<String> arguments) {
   print('\n\n\n*****************************\n\n');
   print('\n\n nullSafety \n\n');
 
-  int? numero1 = null;
+  // int? numero1 = null;
+  late int? numero1 = null;
   print(numero1);
+
+
+  // print('Qual sua idade ?');
+  //
+  // String? inputAge = stdin.readLineSync();
+  // if(inputAge != null){
+  //   int idade = int.parse(inputAge);
+  //   print("Ano que vem sera ${idade + 1}");
+  // }else{
+  //   print('não foi possivel calcular');
+  // }
+  //
+  // print('A idade é $inputAge \n\n');
+
+
+  ///Diferente do final e do const, o static não é um simples modificador de imutabilidade,
+  ///mas sim um modificador que indica que uma propriedade ou método de uma classe é estático,
+  ///e essa informação é usada para o gerenciamento do uso de memória.
+
+
+
+
+
+
 }
