@@ -323,8 +323,31 @@ void main(List<String> arguments) {
     }
   }
 
+  ///comenetário de Documentação
+
+  /// /**
+  /// teste
+  /// **/
+
+  //TODO: fazer outros exemplos
+
+  /*
+  * hello coments
+  *
+  * */
+
   // Método para dizer quantas voltas foram dadas
   for (int i = 0; i < 5; i++) {
     print('Concluí $i voltas');
   }
+
+  //conceito de Null Safety:
+  // na nova versão do dart não podemos receber nulo
+  // em uma variavel, para resolver isso :
+
+  print('\n\n\n*****************************\n\n');
+  print('\n\n nullSafety \n\n');
+
+  int? numero1 = null;
+  print(numero1);
 }
