@@ -151,6 +151,32 @@ void main(List<String> arguments) {
   var duplicated = input.expand((element) => [element, element].toList());
   print(duplicated);
 
+  // var const final - devemos usar o var quando
+  // nao sabemos qual valor o objeto vai assumir
+
+  // int idade = 30;
+  double altura = 1.84;
+  bool geek = false;
+  const String nome =  'Rodrigo Lopes Jr';
+  final String apelido = 'jr';
+  final String apelido1;
+
+  List<dynamic> rodrigoTeste = [idade, altura, nome, apelido];
+  print(rodrigoTeste);
+
+  //Não conseguimos mudar por conta do ser uma variavel do tipo const
+  // nome = 'Lopes';
+  apelido1 = 'hacker';
+
+  rodrigoTeste.add(apelido1);
+
+  print(rodrigoTeste);
+
+  //por ser final apartir do momento que ele recebe um valor ele nao muda mais
+  // apelido1 = 'teste';
+
+
+
 
 }
 
