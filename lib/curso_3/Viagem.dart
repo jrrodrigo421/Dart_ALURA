@@ -11,6 +11,9 @@ class Viagem {
 
   Viagem({required this.locomocao});
 
+  int _totalLocaisVisitados = 0;
+
+
   printCodigo() {
     print(codigo);
   }
@@ -81,5 +84,9 @@ class Viagem {
 
   void registrarPrecoVisita(String local, dynamic preco) {
     registrarPrecos[local] = preco;
+  }
+
+  int get consultarTotalLocaisVisitados{
+    return _totalLocaisVisitados;
   }
 }
