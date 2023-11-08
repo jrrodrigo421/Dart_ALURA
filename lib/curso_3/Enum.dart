@@ -18,18 +18,31 @@ void main(){
   print(lista.toSet());
 
   print(registrosVisitados.first);
-  try {
-    print(registrosVisitados.single);
-  } catch (e, s) {
-    print(s);
-  }
+  // try {
+  //   print(registrosVisitados.single);
+  // } catch (e, s) {
+  //   print(s);
+  // }
   print(registrosVisitados.last);
   print(registrosVisitados.hashCode);
   print(registrosVisitados.iterator);
 
+  Map<String, dynamic> registrarPrecos ={};
+  registrarPrecos['salvador'] = 1500;
+  registrarPrecos['Brazil'] = 5000;
+  registrarPrecos['SRS'] = 150;
+  print(registrarPrecos);
+  registrarPrecos['SRS'] = 300;
+  registrarPrecos['NovaYork'] = 'muito caro';
+
+  print(registrarPrecos);
+  print(registrarPrecos['SRS']);
+  registrarPrecos.remove('Brazil');
+  print(registrarPrecos);
+
+
 
 }
-
 
 registrarDestino(String destino, Set<String> banco){
   banco.add(destino);
