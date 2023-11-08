@@ -12,6 +12,9 @@ main(){
   // Circulo circulo = Circulo(2);
   // print(circulo.pi);  >>> errado
 
+  var retornoCirculo = Circulo.AreaStatic(3);
+  print(retornoCirculo);
+
 }
 
 
@@ -23,5 +26,11 @@ class Circulo{
 
   double Area(){
     return pi * raio * raio;
+  }
+
+  //tambem temos metodo estatico :
+
+  static double AreaStatic(double raioParam){
+    return pi * raioParam * raioParam;
   }
 }
