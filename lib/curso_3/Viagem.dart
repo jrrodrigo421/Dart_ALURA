@@ -13,7 +13,6 @@ class Viagem {
 
   int _totalLocaisVisitados = 0;
 
-
   printCodigo() {
     print(codigo);
   }
@@ -80,6 +79,7 @@ class Viagem {
 
   void visitar(String localVisita) {
     registrosVisitados.add(localVisita);
+    _totalLocaisVisitados += 1;
   }
 
   void registrarPrecoVisita(String local, dynamic preco) {
@@ -88,5 +88,13 @@ class Viagem {
 
   int get consultarTotalLocaisVisitados{
     return _totalLocaisVisitados;
+  }
+
+  void set alterarLocaisvisitados(int novaQtd){
+    if(novaQtd < 10){
+      _totalLocaisVisitados = novaQtd;
+    }else{
+      print("Não é possível");
+    }
   }
 }

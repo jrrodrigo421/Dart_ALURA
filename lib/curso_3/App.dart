@@ -4,8 +4,15 @@ import 'Transporte.dart';
 
 void main(){
   Viagem viagemMaio = Viagem(locomocao: Transporte.trem);
-  var maio = viagemMaio.consultarTotalLocaisVisitados;
-  print(maio);
+  print(viagemMaio.consultarTotalLocaisVisitados);
+
+  viagemMaio.visitar('Museu');
+  print(viagemMaio.consultarTotalLocaisVisitados);
+
+  //setando valor para o metodo set
+  viagemMaio.alterarLocaisvisitados = 18;
+  print(viagemMaio.consultarTotalLocaisVisitados);
+
 
 }
 
