@@ -25,5 +25,5 @@ class MyClass with LogMixin {
 void main() {
   var myObject = MyClass();
   myObject.doSomething();
-  myObject.log('testando mixing')
+  myObject.log('testando mixing');
 }
