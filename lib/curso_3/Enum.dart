@@ -17,6 +17,17 @@ void main(){
   print(lista);
   print(lista.toSet());
 
+  print(registrosVisitados.first);
+  try {
+    print(registrosVisitados.single);
+  } catch (e, s) {
+    print(s);
+  }
+  print(registrosVisitados.last);
+  print(registrosVisitados.hashCode);
+  print(registrosVisitados.iterator);
+
+
 }
 
 
