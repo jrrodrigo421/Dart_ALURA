@@ -1,12 +1,12 @@
 main(){
 
-  Viagem viagemHoje = Viagem();
+  Viagem22 viagemHoje = Viagem22();
   print(viagemHoje.dinheiro.toString());
-  print(Viagem.codigo.toString());
+  print(Viagem22.codigo.toString());
   viagemHoje.printCodigo();
 
 }
-class Viagem{
+class Viagem22{
   static String codigo = 'HSUAHS232';
   double dinheiro = 0;
   printCodigo(){
