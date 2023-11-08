@@ -1,9 +1,28 @@
 void main(){
-  // escolherMeioDeTransporteEnum(Transporte.trem);
+
   escolherMeioDeTransporteEnum(Transporte.aviao);
-  // escolherMeioDeTransporteEnum(Transporte.carro);
-  // escolherMeioDeTransporteEnum(Transporte.skate);
-  // escolherMeioDeTransporteEnum(Transporte.patins);
+
+  Set<String> registrosVisitados = <String>{};
+
+  registrosVisitados = registrarDestino('Bahia', registrosVisitados);
+  registrosVisitados.add('Maracana');
+  registrosVisitados = registrarDestino('SRS', registrosVisitados);
+  registrosVisitados.add('maracana');
+
+  registrosVisitados.forEach((element) {print(element);});
+
+  print(registrosVisitados);
+
+  List lista = ['Rodrigo', 'Lopes', 'Lopes', 'Junior'];
+  print(lista);
+  print(lista.toSet());
+
+}
+
+
+registrarDestino(String destino, Set<String> banco){
+  banco.add(destino);
+  return banco;
 }
 
 void escolherMeioDeTransporteEnum(Transporte transporte) {
@@ -14,7 +33,6 @@ void escolherMeioDeTransporteEnum(Transporte transporte) {
   // }else{
   //   print('Outro transporte');
   // }
-  print('Entrou aqui');
 
   //switch com enum incompleto obrigatorio colocar o default e passar algo caso o parametro nao for encontrado..
   // switch (transporte) {
@@ -66,8 +84,6 @@ void escolherMeioDeTransporteEnum(Transporte transporte) {
       print('testando default');
   }
 }
-
-
 
 enum Transporte{
   carro,
