@@ -31,9 +31,14 @@ main() {
   citrica.existeRefri(true);
   citrica.fazerSuco();
 
+  fruta00.separarIngredientes();
+  citrica.fazerSuco();
+  nozes1.assar();
+  nozes1.fazerMassa();
+
 }
 
-class Fruta extends Alimento {
+class Fruta extends Alimento implements Bolo{
   late String sabor;
   late int diasColheita;
   late int diasAteFicarMadura;
@@ -63,6 +68,21 @@ class Fruta extends Alimento {
   void fazerSuco() {
     print('Voce fez um otimo suco de $nome');
   }
+
+  @override
+  void assar() {
+    print('preparar ingredientes');
+  }
+
+  @override
+  void fazerMassa() {
+    print('fazer massa');
+  }
+
+  @override
+  void separarIngredientes() {
+    print('separar ingredientes da fruta do(a) $nome ');
+  }
 }
 
 class Alimento {
@@ -77,7 +97,7 @@ class Alimento {
   }
 }
 
-class Legume extends Alimento {
+class Legume extends Alimento implements Bolo {
   bool isPrecisaCozinhar;
 
   Legume(String nome, double peso, String cor, this.isPrecisaCozinhar)
@@ -85,9 +105,25 @@ class Legume extends Alimento {
 
   void cozinhar() {
     if (isPrecisaCozinhar) {
-      print('Pronto, $nome está cozonhando');
+      print('Pronto, $nome está cozinhando');
     }
   }
+
+  @override
+  void assar() {
+    print('catar o alimento');
+  }
+
+  @override
+  void fazerMassa() {
+    print('fazer massa');
+  }
+
+  @override
+  void separarIngredientes() {
+    print('separar ingredientes');
+  }
+
 }
 
 class Citrica extends Fruta {
@@ -114,6 +150,24 @@ class Nozes extends Fruta {
 
   Nozes(String nome, double peso, String cor, String sabor,int diasColheita, int diasAteFicarMadura,
       this.porcentagemOleoNatural):super(nome, peso, cor, sabor, diasColheita, diasAteFicarMadura);
+
+  @override
+  void fazerMassa(){
+    print('tirar casca');
+    super.fazerMassa();
+  }
+}
+
+//criando classe abstrata
+abstract class Bolo {
+  //separo ingredientes
+  void separarIngredientes();
+
+  //faço massa
+  void fazerMassa();
+
+  // assar
+  void assar();
 }
 
 String retornaStrinfFormata(
