@@ -13,8 +13,8 @@ class Viagem {
   Viagem({required this.locomocao, required this.tipoCompra});
 
   factory Viagem.criar(TipoCompra tipoCompra, {String tipo = ""}) {
-    switch (tipo) {
-      case "Online":
+    switch (tipoCompra) {
+      case TipoCompra.ONLINE :
         return Remoto(
           tipo: tipo,
           codigo: '13513SS',
@@ -22,15 +22,15 @@ class Viagem {
           locomocao: Transporte.aviao,
           tipoCompra: TipoCompra.ONLINE,
         );
-      case "Fisico":
-        return Fisico(
-          tipo: tipo,
-          codigo: '1351SDRR',
-          dinheiro: 300.00,
-          locomocao: Transporte.trem,
-          tipoCompra: TipoCompra.COMPRA_FISICA,
-        );
-      default:
+        case TipoCompra.COMPRA_FISICA:
+          return Fisico(
+            tipo: tipo,
+            codigo: '1351SDRR',
+            dinheiro: 300.00,
+            locomocao: Transporte.trem,
+            tipoCompra: TipoCompra.COMPRA_FISICA,
+          );
+        default:
         throw ArgumentError('Tipo de viagem desconhecido: $tipo');
     }
   }
