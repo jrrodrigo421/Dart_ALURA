@@ -5,3 +5,7 @@
 ![Thumbnail GitHub](/header.jpg)
 
 # Dart: Orientação a Objetos
+
+![Thumbnail GitHub](/header.jpg)
+
+# Dart: Sintaxe, Coleções, Dinamismo e Encapsulamento
