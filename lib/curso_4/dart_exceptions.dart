@@ -52,6 +52,11 @@ void functionOne() {
     // print(exception.source);
     print(exception.runtimeType);
     print(exception.toString());
+
+    //vai continuar o fluxo caindo na main e quebrando o codigo pois ela na esta preparada para a exception
+    rethrow;
+
+
   }
   // }on HttpException catch(e){
   //   print(e.uri);
