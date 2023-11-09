@@ -65,3 +65,9 @@ void functionTwo() {
   print('finish functionTWO');
 }
 
+//lancar throw
+
+void mainTeste(){
+  // throw FormatException().toString();
+  throw 'testeeee qualquer objeto pode ser  lancado no throw';
+}
