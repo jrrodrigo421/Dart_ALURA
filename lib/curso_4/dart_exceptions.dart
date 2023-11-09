@@ -27,6 +27,8 @@
 
 // Tema : tratamento de exceção testando  coneceito de pilha de execução :
 
+import 'dart:io';
+
 main(){
   print('Started Main');
   functionOne();
@@ -42,8 +44,24 @@ void functionOne() {
   try{
     functionTwo();
 
-  }on FormatException{
+  }on FormatException catch(e){
     print("capiturado pelo functionOne");
+    print(e.message);
+    print(e.offset);
+    print(e.source);
+    print(e.runtimeType);
+    print(e.toString());
+  }on HttpException catch(e){
+    print(e.uri);
+
+  }on IOException catch(e){
+    print('teste');
+    print(e.toString());
+
+    //quando nao sabemos quando a excecao usamos direto o Exception pra pegar a excecao
+  } on Exception catch(e){
+    print('teste');
+    e.toString();
   }
   print('finalized functionOne');
 }
@@ -53,6 +71,8 @@ void functionTwo() {
 
   for(int i = 0; i <= 5 ; i++){
     print('VEZ $i');
+
+
     double amount = double.parse("Not a number");
   }
   print('finish functionTWO');
