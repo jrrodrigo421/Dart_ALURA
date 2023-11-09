@@ -35,14 +35,25 @@ main(){
 
 void functionOne() {
   print('Started FunctionONe');
-  functionTwo();
+
+  //try on usa quando sabemos qual o erro que vai ser gerado
+
+
+  try{
+    functionTwo();
+
+  }on FormatException{
+    print("capiturado pelo functionOne");
+  }
   print('finalized functionOne');
 }
 
 void functionTwo() {
   print('Started functionTWO');
+
   for(int i = 0; i <= 5 ; i++){
     print('VEZ $i');
+    double amount = double.parse("Not a number");
   }
   print('finish functionTWO');
 }
