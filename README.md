@@ -6,6 +6,10 @@
 
 # Dart: Orientação a Objetos
 
-![Thumbnail GitHub](/header.jpg)
+![Thumbnail GitHub](/header2.jpg)
 
 # Dart: Sintaxe, Coleções, Dinamismo e Encapsulamento
+
+![Thumbnail GitHub](/parametrosConstrutores.jpg)
+
+# Dart: Quatro principais parâmetros em Dart
