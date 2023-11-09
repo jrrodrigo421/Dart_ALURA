@@ -35,6 +35,9 @@ class BankController {
     if (!accountSender.isAuthenticated) {
       throw SenderNotAuthenticatedException(idSender: idSender);
     }
+    if (!accountReceiver.isAuthenticated){
+      throw ReceiverNotAuthenticatedException(idReceiver: idReceiver);
+    }
 
     // Verificar se o remetente possui saldo suficiente
     if (accountSender.balance < amount) {
@@ -56,3 +59,4 @@ class BankController {
     return _database.containsKey(id);
   }
 }
+
