@@ -6,7 +6,9 @@ class Account {
   Account(
       {required this.name,
       required this.balance,
-      required this.isAuthenticated});
+      required this.isAuthenticated})
+      : assert(name.isNotEmpty, 'O nome não pode ser vazio '),
+        assert(balance >= 0 , 'O Saldo não pode ser nagativo');
 
   editBalance({required value}) {
     balance = balance + value;

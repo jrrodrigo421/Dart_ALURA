@@ -3,10 +3,17 @@ import 'controllers/bank_controller.dart';
 import 'models/account.dart';
 
 void main() {
+
+  //testando assert
+  // assert(1>2, 'testando assert');
+
+
   // Criando o banco
   BankController bankController = BankController();
 
   // Adicionando contas
+
+  Account accountTest = Account(name: "testse", balance: -200, isAuthenticated: true);
   bankController.addAccount(
       id: "Rodrigo",
       account:
