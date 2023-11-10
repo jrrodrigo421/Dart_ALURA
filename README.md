@@ -13,3 +13,9 @@
 ![Thumbnail GitHub](/parametrosConstrutores.jpg)
 
 # Dart: Quatro principais parâmetros em Dart
+
+![Thumbnail GitHub](/exceptions.jpg)
+
+# Dart: Exceções e Null Safety
+
+
