@@ -10,6 +10,14 @@ void main() async {
   var a = true;
   String usuario = '';
 
+  var myStream =  BotClock().rodBotStream(1,10);
+  var subscriber =  myStream.listen((event) {
+    print('               rodbotStream activated is $event seconds');
+  }, onDone:  (){
+    print('rodBotStream finish');
+    a = false;
+  });
+
   print('-- Iniciando o rodrigoBot, aguarde..--');
 
   await BotClock().clock(4);
