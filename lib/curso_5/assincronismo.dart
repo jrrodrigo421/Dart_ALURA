@@ -15,7 +15,8 @@ void main() async {
     int i = 1;
     while(i != maxCount){
       await Future.delayed(Duration(seconds: interval));
-      print('dentro do loop do sream');
+      //não printa ?
+      print('dentro do loop do stream');
       yield i++;
     }
   }
