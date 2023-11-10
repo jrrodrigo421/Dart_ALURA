@@ -42,3 +42,30 @@ void main() async {
 
   print('Main is FINISH');
 }
+
+
+/*
+Methods that process a stream
+The following methods on Stream<T> process the stream and return a result:
+
+Future<T> get first;
+Future<bool> get isEmpty;
+Future<T> get last;
+Future<int> get length;
+Future<T> get single;
+Future<bool> any(bool Function(T element) test);
+Future<bool> contains(Object? needle);
+Future<E> drain<E>([E? futureValue]);
+Future<T> elementAt(int index);
+Future<bool> every(bool Function(T element) test);
+Future<T> firstWhere(bool Function(T element) test, {T Function()? orElse});
+Future<S> fold<S>(S initialValue, S Function(S previous, T element) combine);
+Future forEach(void Function(T element) action);
+Future<String> join([String separator = '']);
+Future<T> lastWhere(bool Function(T element) test, {T Function()? orElse});
+Future pipe(StreamConsumer<T> streamConsumer);
+Future<T> reduce(T Function(T previous, T element) combine);
+Future<T> singleWhere(bool Function(T element) test, {T Function()? orElse});
+Future<List<T>> toList();
+Future<Set<T>> toSet();
+ */
