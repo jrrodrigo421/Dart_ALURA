@@ -13,7 +13,13 @@ class GoodManners{
         question.contains('FÉ')) {
       isThisGoodManners = true;
     }
-
     return isThisGoodManners;
+  }
+  goodManners(){
+    if(question.contains('Bom dia') || question.contains('Boa noite') || question.contains('FÉ')){
+      print(RodrigoBot+ 'opa Bão! féfé fé');
+    }else{
+      print('BORA!!!');
+    }
   }
 }

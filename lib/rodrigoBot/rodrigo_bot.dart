@@ -1,6 +1,7 @@
 
 import 'dart:io';
 
+import 'package:projeto_inicial/rodrigoBot/questions/good_manners.dart';
 import 'package:projeto_inicial/rodrigoBot/waiting_time.dart';
 
 import '../rodrigoBot/questions/time_questions.dart';
@@ -24,7 +25,9 @@ void main() async {
 
   print('rodrigoBot:\n Oi :) \n Como posso ajudar?');
   do {
+
     usuario = stdin.readLineSync().toString();
+
     print('-- Processando pergunta, aguarde..--');
     await BotClock().clock(2);
     if (usuario.contains('xau') ||
@@ -36,6 +39,9 @@ void main() async {
     } else if (TimeQuestions(usuario).isThisTime()) {
       // verificar antes, assim não fazemos toda a função sem precisar.
       TimeQuestions(usuario).timeQuestion();
+    } else if (GoodManners(usuario).isThisManners()) {
+      //Basta adicionar novas perguntas aqui!
+      GoodManners(usuario).goodManners();
     } else if (false) {
       //Basta adicionar novas perguntas aqui!
     } else {
