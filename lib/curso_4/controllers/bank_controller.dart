@@ -33,6 +33,7 @@ class BankController {
 
     // Verificar se o remetente está autenticado
     if (!accountSender.isAuthenticated) {
+      // throw SenderNotAuthenticatedException(idSender: idSender);
       throw SenderNotAuthenticatedException(idSender: idSender);
     }
     if (!accountReceiver.isAuthenticated){
