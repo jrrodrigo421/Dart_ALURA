@@ -1,8 +1,39 @@
+import 'dart:math';
+
 import 'package:projeto_inicial/curso_4/exception/bank_controller_exceptions.dart';
 import 'controllers/bank_controller.dart';
 import 'models/account.dart';
 
+void testingNullSafaty(){
+  Account? account;
+
+  //Simulando comunicação externa:
+  Random rng = Random();
+  int randomNumber = rng.nextInt(10);
+  print(randomNumber);
+  if(randomNumber <= 5){
+    account = Account(name: 'RodriguinhoJr', balance: 100000, isAuthenticated: true);
+  }
+  print(account.runtimeType);
+
+  // print(account.balance);
+  // print(account!.balance);
+
+  // if(account != null){
+  //   print(account.balance);
+  // }else{
+  //   print('conta nula');
+  // }
+
+  //operador ternario
+  // print(account != null ? account.balance : "conta Nula");
+
+  print(account?.balance);
+}
+
 void main() {
+
+  testingNullSafaty();
 
   //testando assert
   // assert(1>2, 'testando assert');
@@ -13,7 +44,7 @@ void main() {
 
   // Adicionando contas
 
-  Account accountTest = Account(name: "testse", balance: -200, isAuthenticated: true);
+  Account accountTest = Account(name: "testse", balance: 200, isAuthenticated: true);
   bankController.addAccount(
       id: "Rodrigo",
       account:
@@ -22,12 +53,12 @@ void main() {
   bankController.addAccount(
       id: "Gleice",
       account:
-          Account(name: "Gleice Lopes", balance: 60000, isAuthenticated: false));
+          Account(name: "Gleice Lopes", balance: 60000, isAuthenticated: true));
 
   try{
     // Fazendo transferência
      bool result = bankController.makeTransfer(
-        idSender: "Rodrigo", idReceiver: "Gleice", amount: 500);
+        idSender: "Rodrigo", idReceiver: "RodriguinhoJr", amount: 500);
 
      if(result){
        // Observando resultado
