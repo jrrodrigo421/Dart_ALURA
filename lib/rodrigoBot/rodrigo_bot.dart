@@ -1,6 +1,8 @@
 
 import 'dart:io';
 
+import 'package:projeto_inicial/rodrigoBot/waiting_time.dart';
+
 import '../rodrigoBot/questions/time_questions.dart';
 
 void main() async {
@@ -10,10 +12,13 @@ void main() async {
 
   print('-- Iniciando o rodrigoBot, aguarde..--');
 
+  await BotClock().clock(4);
+
   print('rodrigoBot:\n Oi :) \n Como posso ajudar?');
   do {
     usuario = stdin.readLineSync().toString();
     print('-- Processando pergunta, aguarde..--');
+    await BotClock().clock(2);
     if (usuario.contains('xau') ||
         usuario.contains('Xau') ||
         usuario.contains('Adeus') ||
@@ -26,6 +31,7 @@ void main() async {
     } else if (false) {
       //Basta adicionar novas perguntas aqui!
     } else {
+      await BotClock().clock(2);
       print(rodrigoBot +
           ' Não fui treinado para responder a essa pergunta \n Desculpe :( ');
       print(rodrigoBot + ' Você pode fazer outra pergunta ou dizer Adeus');
@@ -33,4 +39,6 @@ void main() async {
   } while (a);
 
   print('--Encerrando rodrigoBot--');
+  await BotClock().clock(2);
+
 }
